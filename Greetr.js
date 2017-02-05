@@ -1,4 +1,7 @@
-(function(global, $) {
+//Begins with an IIFE to close in variables so that only selected items are
+//exposed to window object, the semi-colon ensure that if the code before it
+//hasn't ended with one it does not collide with your code
+;(function(global, $) {
 	// 'Calling Greetr or g creates a new object'
 	var Greetr = function(firstName, lastName, language) {
 		return new Greetr.init(firstName, lastName, language);
@@ -44,7 +47,7 @@
 		//retrieve messages from object by referring to properties using [] syntax
 		//- gets the value by referencing the key as a string
 		greeting: function() {
-			return greetings[this.language] + ' ' + this.fullName + '!';
+			return greetings[this.language] + ' ' + this.fullName() + '!';
 		},
 
 		formalGreeting: function() {
