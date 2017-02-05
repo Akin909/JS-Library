@@ -1,2 +1,4 @@
 var g = G$('john', 'doe', 'en')
-console.log(g)
+
+g.greet().setLang('es').greet(true).log()
+
